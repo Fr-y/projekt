@@ -1,0 +1,6 @@
+Játék menet:
+A játék egy Tower defense stílusban készül aminek a lényege, hogy van egy pálya, amin védelmező szerepet betöltő tornyokkal próbáljuk védelmezni a bázisunkat. A pályákat véletlenszerűen dobja be a rendszer. A tornyokból különböző erővel bírok közül tudunk válásztani, de ezeket meg kell vásárolnunk, hogy tudjuk használni őket és ezek fejlesztesükre is van lehetőseg amik további költségekkel járnak. Pénzt az idő elteltével és az ellenséges támadok kiiktatásával tudunk szerezni. A támadok között lehetnek ú.n. vezetők akik jobban bírják a támadásokat és jellemzően nagyobb az erejük. A szintekhez párosulnak "hordák" amikben jönnek az ellenségek és a szintek növekedésével linearísan növekszik az ellenséges csoportok nehézsegi szintje.
+A játék véget ér ha elfogy a bázis életereje ami 100-ról indul.
+
+Menü:
+A játék elinditása után, mikor betöltött találhatunk egy "Játek" nevezetű gombot amivel eltudjuk indítani a játékmenetet. Ezalatt található a "Beállítások" opció ahol személyre szabhatjuk a játékban lévő beállításokat amivel fokozhatjuk a játék élményét pl.: nagyobb felbontás, halkíthatjuk, illetve hagosíthatjuk és fel is gyorsíthatjuk a játékmenenet, erre miközben elindítottuk a játekot akkor is lehetőseg van. A legalsó gomb a "Kilépés" amely segítségével kiléphetünk a játékból, de ezt megteheti egyéb nem játékbeli lehetőségekkel.
