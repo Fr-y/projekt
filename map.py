@@ -1,17 +1,27 @@
-from pytmx import load_pygame, TiledTileLayer
+import pygame as pg
+import pytmx
+import os
+from settings import *
+vec = pg.math.Vector2
 
-def map_setup():
-    global image
 
-    # Getting / Importing the map
-    tmxdata = load_pygame("Tile_files\\mymap2.tmx")
-    width = tmxdata.width * tmxdata.tilewidth
-    height = tmxdata.height * tmxdata.tileheight
+class TiledMap:
+  def __init__(self, filename):
+    tm = pytmx.load_pygame(filename, pixelalpha=True)
+    self.width = tm.width * tm.tilewidth
+    self.height = tm.height * tm.tileheight
+    self.tmxdata = tm
 
-    ti = tmxdata.get_tile_image_by_gid
-    for layer in tmxdata.visible_layers:
-        if isinstance(layer, TiledTileLayer):
-            for x, y, gid, in layer:
-                tile = ti(gid)
-                if tile:
-                    image = tmxdata.get_tile_image(x, y, laye
+  def render(self, surface):
+    ti = self.tmxdata.get_tile_image_by_gid
+    for layer in self.tmxdata.visible_layers:
+        if isinstance(layer, pytmx.TiledTileLayer):
+          for x, y, gid, in layer:
+            tile = ti(gid)
+            if tile:
+                surface.blit(tile, (x * self.tmxdata.tilewidth
+                                    y * self.tmxdata.tileheight))
+  def make_map(self):
+    temp_surface = pg.Surface((self.width, self.height))
+    self.render(temp_surface)
+    return temp_surface
